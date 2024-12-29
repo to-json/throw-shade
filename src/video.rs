@@ -11,11 +11,13 @@ use raylib::texture::RenderTexture2D;
 
 pub fn display(
     close: Arc<RwLock<bool>>,
+    width: i32,
+    height: i32,
     lvl: Arc<RwLock<f32>>,
     freqs: Arc<RwLock<[f32; 21]>>,
     shader: &Path,
 ) -> AnyResult<()> {
-    let (w, h) = (1280, 900);
+    let (w, h) = (width, height);
     let name = "throw-shade";
     let (mut rl, thread) = raylib::init().size(w, h).title(name).build();
     rl.set_target_fps(30);
