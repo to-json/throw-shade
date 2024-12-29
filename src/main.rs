@@ -12,7 +12,6 @@ use std::path::PathBuf;
 use clap::Parser;
 mod video;
 mod audio;
-mod throw_shade;
 
 #[derive(Parser)]
 #[command(version, about, long_about = None)]
